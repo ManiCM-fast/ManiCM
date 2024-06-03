@@ -26,7 +26,7 @@ You can modify the configuration of the teacher model and ManiCM by editing thes
 
 `num_inference_timesteps`: The inference steps of ManiCM.
 
-`num_train_timesteps`: Total Time Step for Adding Noise.
+`num_train_timesteps`: Total time step for adding noise.
 
 `prediction_type`:  `epsilon` represents prediction noise, while `sample` represents predicted action.
 
