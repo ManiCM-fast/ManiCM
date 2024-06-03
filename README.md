@@ -1,6 +1,6 @@
 # [ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation](https://manicm-fast.github.io/)
 
-[Project Page](https://manicm-fast.github.io/) | [arXiv]() | [Paper]() 
+[Project Page (coming soon)](https://manicm-fast.github.io/) | [arXiv (coming soon)]() | [Paper (coming soon)]() 
 
 [Guanxing Lu](https://guanxinglu.github.io/)\*, Zifeng Gao\*, [Tianxing Chen](https://tianxingchen.github.io), [Wenxun Dai](https://github.com/Dai-Wenxun), [Ziwei Wang](https://ziweiwangthu.github.io/), [Yansong Tang](https://andytang15.github.io/)
 
