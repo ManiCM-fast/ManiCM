@@ -36,7 +36,7 @@ For more detailed arguments, please refer to the scripts and the code. We here p
 
 2. Train and evaluate a policy with behavior cloning. For example:
     ```bash
-    bash scripts/train_policy.sh dp3 adroit_hammer 0112 0 0
+    bash scripts/train_policy.sh dp3 adroit_hammer 0603 0 0
     ```
     This will train a DP3 policy on the `hammer` task in Adroit environment using point cloud modality. By default we **save** the ckpt (optional in the script).
 
