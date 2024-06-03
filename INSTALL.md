@@ -4,7 +4,7 @@ The following guidance works well for a machine with 4090GPU, cuda 11.7, driver 
 
 First, git clone this repo and `cd` into it.
 
-    git clone https://github.com/YanjieZe/3D-Diffusion-Policy.git
+    git clone https://github.com/ManiCM-fast/ManiCM.git
 
 
 **Please strictly follow the guidance to avoid any potential errors. Especially, make sure Gym version is the same.**
@@ -40,7 +40,7 @@ First, git clone this repo and `cd` into it.
 
     cd ~/.mujoco
     wget https://github.com/deepmind/mujoco/releases/download/2.1.0/mujoco210-linux-x86_64.tar.gz -O mujoco210.tar.gz --no-check-certificate
-
+    
     tar -xvzf mujoco210.tar.gz
 
 and put the following into your bash script (usually in `YOUR_HOME_PATH/.bashrc`). Remember to `source ~/.bashrc` to make it work and then open a new terminal.
@@ -64,7 +64,7 @@ and then install mujoco-py (in the folder of `third_party`):
 5.install sim env
 
     pip install setuptools==59.5.0 Cython==0.29.35 patchelf==0.17.2.0
-
+    
     cd third_party
     cd dexart-release && pip install -e . && cd ..
     cd gym-0.21.0 && pip install -e . && cd ..
