@@ -72,3 +72,15 @@ This repository is released under the MIT license.
 # 🙏 Acknowledgement
 
 Our code is built upon [3D Diffusion Policy](https://github.com/YanjieZe/3D-Diffusion-Policy), [MotionLCM](https://github.com/Dai-Wenxun/MotionLCM), [Latent Consistency Model](https://github.com/luosiallen/latent-consistency-model), [Diffusion Policy](https://github.com/real-stanford/diffusion_policy), [VRL3](https://github.com/microsoft/VRL3), [Metaworld](https://github.com/Farama-Foundation/Metaworld), and [ManiGaussian](https://github.com/GuanxingLu/ManiGaussian). We would like to thank the authors for their excellent works.
+
+# 🥰 Citation
+If you find this repository helpful, please consider citing:
+
+```
+@article{lu2024manicm,
+      title={ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation}, 
+      author={Guanxing Lu and Zifeng Gao and Tianxing Chen and Wenxun Dai and Ziwei Wang and Yansong Tang},
+      journal={arXiv preprint arXiv:2406.01586},
+      year={2024}
+}
+```
