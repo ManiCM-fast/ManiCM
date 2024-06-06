@@ -30,13 +30,15 @@ You can modify the configuration of the teacher model and ManiCM by editing thes
 
 `prediction_type`:  `epsilon` represents prediction noise, while `sample` represents predicted action.
 
+For more detailed arguments, please refer to the scripts and the code.
+
 # 🛠️ Usage
 
 Scripts for generating demonstrations, training, and evaluation are all provided in the `scripts/` folder. 
 
 The results are logged by `wandb`, so you need to `wandb login` first to see the results and videos.
 
-For more detailed arguments, please refer to the scripts and the code. We here provide a simple instruction for using the codebase.
+We provide a simple instruction for using the codebase here.
 
 1. Generate demonstrations by `gen_demonstration_adroit.sh` and `gen_demonstration_dexart.sh`. See the scripts for details. For example:
     ```bash
