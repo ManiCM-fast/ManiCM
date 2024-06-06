@@ -45,12 +45,12 @@ For more detailed arguments, please refer to the scripts and the code. We here p
     This will generate demonstrations for the `hammer` task in Adroit environment. The data will be saved in `3D-Diffusion-Policy/data/` folder automatically.
 
 
-2. Train and evaluate a policy with behavior cloning. For example:
+2. Train and evaluate a teacher policy with behavior cloning. For example:
     ```bash
     # bash scripts/train_policy.sh config_name task_name addition_info seed gpu_id 
     bash scripts/train_policy.sh dp3 adroit_hammer 0603 0 0
     ```
-    This will train a DP3 policy on the `hammer` task in Adroit environment using point cloud modality. By default we **save** the ckpt (optional in the script).
+    This will train a DP3 policy on the `hammer` task in Adroit environment using point cloud modality. By default we **save** the ckpt (optional in the script). During training, teacher's model takes ~10G gpu memory and ~4 hours on an Nvidia 4090 GPU.
     
 3. Move teacher's ckpt. For example:
     ```bash
@@ -63,7 +63,7 @@ For more detailed arguments, please refer to the scripts and the code. We here p
     # bash scripts/train_policy_cm.sh config_name task_name addition_info seed gpu_id
     bash scripts/train_policy_cm.sh dp3_cm adroit_hammer 0603_cm 0 0
     ```
-    This will train ManiCM use a DP3 policy teacher model on the `hammer` task in Adroit environment using point cloud modality.
+    This will train ManiCM use a DP3 policy teacher model on the `hammer` task in Adroit environment using point cloud modality. During training, ManiCM model takes ~10G gpu memory and ~4 hours on an Nvidia 4090 GPU.
 
 # 🏞️ Checkpoints
 
