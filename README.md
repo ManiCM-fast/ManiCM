@@ -69,7 +69,7 @@ We provide a simple instruction for using the codebase here.
 
 # 🏞️ Checkpoints
 
-We have updated the [pre-trained checkpoints](https://drive.google.com/drive/folders/1WhYQij_D3IisDpdLjKCQF3iaZB1bZ63f?usp=sharing) of `adroit_hammer` task for your convenience. You can download them and place the folder into `data/outputs/`.
+We have updated the [pre-trained checkpoints](https://drive.google.com/drive/folders/1WhYQij_D3IisDpdLjKCQF3iaZB1bZ63f?usp=sharing) of `hammer` task in Adroit environment for your convenience. You can download them and place the folder into `data/outputs/`.
 
 # 🏷️ License
 This repository is released under the MIT license.
