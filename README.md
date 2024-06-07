@@ -89,3 +89,58 @@ If you find this repository helpful, please consider citing:
       year={2024}
 }
 ```
+
+# 31 Tasks (Adroit and MetaWorld)
+<div id="video-container"></div>
+<script>
+    // 获取视频容器（确保ID与HTML中的div标签一致）
+    var container = document.getElementById('video-container');
+
+    // 函数用于创建视频元素并添加到容器
+    function createVideoElement(index) {
+        var video = document.createElement('video');
+        video.className = 'video-item'; // 确保这个类名与CSS中的类名一致
+        video.setAttribute('controls', '');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('loop', '');
+        video.muted = true; // 静音自动播放
+    
+        var source = document.createElement('source');
+        source.src = 'videos/' + index + '.mp4';
+        source.type = 'video/mp4';
+    
+        video.appendChild(source);
+    
+        // 视频加载完成后自动播放
+        video.addEventListener('loadedmetadata', function() {
+            video.style.display = 'block'; // 显示视频
+            video.play(); // 播放视频
+        });
+    
+        return video;
+    }
+    
+    // 动态创建并添加32个视频到页面
+    for (var i = 1; i <= 32; i++) {
+        container.appendChild(createVideoElement(i));
+    }
+</script>
+
+<style>
+  #video-container { /* 使用ID选择器来匹配上面的div标签 */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8列 */
+    grid-template-rows: repeat(4, auto); /* 4行，高度根据内容自动调整 */
+    gap: 10px; /* 网格项之间的间隙 */
+    width: 100%; /* 容器宽度，可根据需要调整 */
+    margin: auto; /* 居中显示 */
+    padding: 5px; /* 容器内边距 */
+    border: 2px dashed #333; /* 虚线边框 */
+    box-sizing: border-box; /* 边框计算在宽度内 */
+  }
+  .video-item {
+    width: 100%; /* 视频宽度 */
+    height: auto; /* 视频高度自适应 */
+    display: block; /* 显示视频 */
+  }
+</style>
