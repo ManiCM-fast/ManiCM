@@ -90,57 +90,189 @@ If you find this repository helpful, please consider citing:
 }
 ```
 
-# 31 Tasks (Adroit and MetaWorld)
-<div id="video-container"></div>
-<script>
-    // 获取视频容器（确保ID与HTML中的div标签一致）
-    var container = document.getElementById('video-container');
+# ✅ 31 Tasks (Adroit and MetaWorld)
 
-    // 函数用于创建视频元素并添加到容器
-    function createVideoElement(index) {
-        var video = document.createElement('video');
-        video.className = 'video-item'; // 确保这个类名与CSS中的类名一致
-        video.setAttribute('controls', '');
-        video.setAttribute('autoplay', '');
-        video.setAttribute('loop', '');
-        video.muted = true; // 静音自动播放
-    
-        var source = document.createElement('source');
-        source.src = 'videos/' + index + '.mp4';
-        source.type = 'video/mp4';
-    
-        video.appendChild(source);
-    
-        // 视频加载完成后自动播放
-        video.addEventListener('loadedmetadata', function() {
-            video.style.display = 'block'; // 显示视频
-            video.play(); // 播放视频
-        });
-    
-        return video;
-    }
-    
-    // 动态创建并添加32个视频到页面
-    for (var i = 1; i <= 32; i++) {
-        container.appendChild(createVideoElement(i));
-    }
-</script>
+<div class="video-container">
+  <!-- 示例中只添加了部分视频，你需要根据实际情况添加所有32个视频 -->
+  
+  <video class="video-item" controls>
+    <source src="videos/1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/6.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/7.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/8.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/9.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/10.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/11.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/12.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/13.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/14.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/15.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/16.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/17.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/18.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/19.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/20.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/21.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/22.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/23.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/24.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/25.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/26.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/27.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/28.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/29.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/30.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/31.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video class="video-item" controls>
+    <source src="videos/32.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- 其他视频标签 -->
+</div>
+
 
 <style>
-  #video-container { /* 使用ID选择器来匹配上面的div标签 */
-    display: grid;
-    grid-template-columns: repeat(8, 1fr); /* 8列 */
-    grid-template-rows: repeat(4, auto); /* 4行，高度根据内容自动调整 */
-    gap: 10px; /* 网格项之间的间隙 */
-    width: 100%; /* 容器宽度，可根据需要调整 */
-    margin: auto; /* 居中显示 */
-    padding: 5px; /* 容器内边距 */
-    border: 2px dashed #333; /* 虚线边框 */
-    box-sizing: border-box; /* 边框计算在宽度内 */
-  }
-  .video-item {
-    width: 100%; /* 视频宽度 */
-    height: auto; /* 视频高度自适应 */
-    display: block; /* 显示视频 */
-  }
+    .video-container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); /* 8列，每列占网格容器宽度的1/8 */
+        grid-template-rows: repeat(4, 1fr); /* 4行，每行占网格容器高度的1/4 */
+        gap: 5px; /* 网格项之间的间隙 */
+        width: 100%; /* 容器宽度 */
+        border: 2px dashed #333; /* 虚线边框，可以根据需要调整颜色 */
+        /* 如果您希望网格容器的高度也是自适应的，可以添加以下属性 */
+        height: auto; /* 容器高度自适应 */
+    }
+    .video-item {
+        width: 100%; /* 视频宽度占满网格项宽度 */
+        height: 100%; /* 视频高度占满网格项高度 */
+        /* 如果视频原始比例不是1:1，可能需要以下属性来保持视频的宽高比 */
+        object-fit: cover; /* 视频填充网格项，可能会被裁剪 */
+    }
 </style>
