@@ -44,7 +44,7 @@ We provide a simple instruction for using the codebase here.
     ```bash
     bash scripts/gen_demonstration_adroit.sh hammer
     ```
-    This will generate demonstrations for the `hammer` task in Adroit environment. The data will be saved in `3D-Diffusion-Policy/data/` folder automatically.
+    This will generate demonstrations for the `hammer` task in Adroit environment. The data will be saved in `ManiCM/data/` folder automatically.
 
 
 2. Train and evaluate a teacher policy with behavior cloning. For example:
