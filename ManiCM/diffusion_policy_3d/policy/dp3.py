@@ -384,13 +384,15 @@ class DP3(BasePolicy):
                             global_cond=global_cond)
 
         # 一致性噪声残差预测
-        double_timestep = 2 * timesteps
-        if ( double_timestep > self.noise_scheduler.config.num_train_timesteps - 1)
-            double_timestep = self.noise_scheduler.config.num_train_timesteps - 1
+        double_timestep = timesteps * 2
+        max_timesteps = self.noise_scheduler.config.num_train_timesteps - 1
+        double_timestep[double_timestep > max_timesteps] = max_timesteps
+
         shortcut_consistency_pred = self.model(sample=noisy_trajectory, 
                             timestep=double_timestep, 
                             local_cond=local_cond, 
                             global_cond=global_cond)
+
 
         # 选择目标值
         pred_type = self.noise_scheduler.config.prediction_type 
