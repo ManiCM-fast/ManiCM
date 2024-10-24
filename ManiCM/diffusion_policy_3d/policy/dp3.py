@@ -413,7 +413,7 @@ class DP3(BasePolicy):
         else:
             raise ValueError(f"Unsupported prediction type {pred_type}")
 
-        loss = k * F.mse_loss(pred, target, reduction='none') + (1 - k) * F.mse_loss(pred, shortcut_consistency_pred, reduction='none')
+        loss = 0.75 * F.mse_loss(pred, target, reduction='none') + 0.25 * F.mse_loss(pred, shortcut_consistency_pred, reduction='none')
         loss = loss * loss_mask.type(loss.dtype)
         loss = reduce(loss, 'b ... -> b (...)', 'mean')
         loss = loss.mean()
