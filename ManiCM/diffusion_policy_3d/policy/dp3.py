@@ -375,14 +375,24 @@ class DP3(BasePolicy):
         # apply conditioning
         noisy_trajectory[condition_mask] = cond_data[condition_mask]
 
-        # Predict the noise residual
         
+        # Predict the noise residual
+        # 预测
         pred = self.model(sample=noisy_trajectory, 
-                        timestep=timesteps, 
+                            timestep=timesteps, 
                             local_cond=local_cond, 
                             global_cond=global_cond)
 
+        # 一致性噪声残差预测
+        double_timestep = 2 * timesteps
+        if ( double_timestep > self.noise_scheduler.config.num_train_timesteps - 1)
+            double_timestep = self.noise_scheduler.config.num_train_timesteps - 1
+        shortcut_consistency_pred = self.model(sample=noisy_trajectory, 
+                            timestep=double_timestep, 
+                            local_cond=local_cond, 
+                            global_cond=global_cond)
 
+        # 选择目标值
         pred_type = self.noise_scheduler.config.prediction_type 
         if pred_type == 'epsilon':
             target = noise
@@ -403,12 +413,11 @@ class DP3(BasePolicy):
         else:
             raise ValueError(f"Unsupported prediction type {pred_type}")
 
-        loss = F.mse_loss(pred, target, reduction='none')
+        loss = k * F.mse_loss(pred, target, reduction='none') + (1 - k) * F.mse_loss(pred, shortcut_consistency_pred, reduction='none')
         loss = loss * loss_mask.type(loss.dtype)
         loss = reduce(loss, 'b ... -> b (...)', 'mean')
         loss = loss.mean()
         
-
         loss_dict = {
                 'bc_loss': loss.item(),
             }
