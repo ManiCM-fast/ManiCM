@@ -9,8 +9,8 @@ cd third_party/dexart-release
 task_name=${1}
 num_episodes=100
 root_dir=../../ManiCM/data/
-
-CUDA_VISIBLE_DEVICES=2 python examples/gen_demonstration_expert.py --task_name=${task_name} \
+CUDA_VISIBLE_DEVICES=0
+python examples/gen_demonstration_expert.py --task_name=${task_name} \
             --checkpoint_path assets/rl_checkpoints/${task_name}/${task_name}_nopretrain_0.zip \
             --num_episodes $num_episodes \
             --root_dir $root_dir \
